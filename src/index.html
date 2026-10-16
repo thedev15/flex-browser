@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark"><title>Flex Browser</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar"><div class="brand"><span class="brand-mark">F</span><span>Flex</span></div><div class="engine-pill"><span class="pulse"></span><span>Local workspace</span></div><button class="icon-button" id="inspector-button" title="Toggle inspector">◈</button></header>
+    <nav class="tabbar" aria-label="Tabs"><button class="tab active"><span class="tab-favicon">◉</span><span class="tab-title">New tab</span><span class="tab-close">×</span></button><button class="new-tab" id="new-tab" title="New tab">+</button></nav>
+    <section class="toolbar"><button class="toolbar-button" title="Back">‹</button><button class="toolbar-button" title="Forward">›</button><button class="toolbar-button" id="reload" title="Reload">↻</button><form id="address-form" class="address-form"><span class="secure">⌁</span><input id="address" autocomplete="off" spellcheck="false" value="flex://home" aria-label="Address"><button type="button" class="address-action" title="Bookmark">☆</button></form><button class="toolbar-button" title="Menu">⋯</button></section>
+    <section class="workspace"><div class="page" id="page"><div class="hero"><div class="eyebrow">A calmer way to browse</div><h1>One workspace.<br><em>Every engine.</em></h1><p>Inspect responsive behavior across Chromium, Firefox, and WebKit from one focused, local-first surface.</p><form id="search-form" class="search-box"><span>⌕</span><input id="search" placeholder="Search or enter a web address" aria-label="Search"><button>Go</button></form><div class="quick-links"><button data-url="https://developer.mozilla.org">MDN Web Docs</button><button data-url="https://www.w3.org">W3C Standards</button><button data-url="https://github.com">GitHub</button></div></div></div>
+      <aside class="inspector" id="inspector" hidden><div class="inspector-header"><strong>Inspector</strong><button id="close-inspector">×</button></div><div class="inspector-section"><span class="label">Rendering profile</span><strong>Chromium-compatible</strong></div><div class="inspector-section"><span class="label">Viewport</span><strong id="viewport">—</strong></div><div class="inspector-section"><span class="label">Privacy</span><strong class="green">Local controls active</strong></div><div class="inspector-section"><span class="label">Compatibility</span><div class="engine-grid"><span>Chromium / Edge</span><b>Ready</b><span>Firefox</span><b>Ready</b><span>WebKit / Safari-like</span><b>Ready</b></div></div><p class="inspector-note">WebKit provides a Safari-like compatibility target. Safari itself is only available on Apple platforms.</p></aside></section>
+    <footer class="statusbar"><span>● Ready</span><span>Local-only controls · Cross-engine lab</span></footer>
+  </main><script src="renderer.js"></script>
+</body>
+</html>

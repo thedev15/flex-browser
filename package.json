@@ -1,0 +1,19 @@
+{
+  "name": "flex-browser",
+  "version": "1.0.0",
+  "description": "An original, privacy-first browser workspace with cross-engine inspection.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test",
+    "install-engines": "playwright install chromium firefox webkit"
+  },
+  "keywords": ["browser", "cross-browser", "playwright", "privacy"],
+  "author": "thedev15",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^38.2.0",
+    "playwright": "^1.55.0"
+  },
+  "type": "commonjs"
+}
