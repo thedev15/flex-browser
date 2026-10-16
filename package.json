@@ -6,14 +6,23 @@
   "scripts": {
     "start": "electron .",
     "test": "node --test",
-    "install-engines": "playwright install chromium firefox webkit"
+    "install-engines": "playwright install chromium firefox webkit",
+    "rea:setup": "npx rea-agents@latest setup",
+    "rea:inspect": "npx -y rea-agents@latest analyze-javascript-application . --source-path main.js --source-path preload.js --source-path src/renderer.js --format json --max-semantic-nodes 20000",
+    "engines:inspect": "node scripts/engine-matrix.js"
   },
-  "keywords": ["browser", "cross-browser", "playwright", "privacy"],
+  "keywords": [
+    "browser",
+    "cross-browser",
+    "playwright",
+    "privacy"
+  ],
   "author": "thedev15",
   "license": "MIT",
   "devDependencies": {
     "electron": "^38.2.0",
-    "playwright": "^1.55.0"
+    "playwright": "^1.55.0",
+    "rea-agents": "^6.5.0"
   },
   "type": "commonjs"
 }
